@@ -1,0 +1,130 @@
+{
+  "faithfulness_score": 0.0,
+  "source_kg_coverage": 0.8,
+  "source_kg_confidence": "HIGH",
+  "totals": {
+    "response_triples": 2,
+    "source_triples": 4,
+    "grounded": 0,
+    "contradicted": 1,
+    "fabricated": 1
+  },
+  "verdicts": [
+    {
+      "response_triple": {
+        "entity1": "Einstein",
+        "relation": "invented",
+        "entity2": "telephone",
+        "confidence": "MEDIUM"
+      },
+      "best_source_triple": {
+        "entity1": "Albert Einstein",
+        "relation": "was born in",
+        "entity2": "Ulm",
+        "confidence": "HIGH"
+      },
+      "similarity": 0.5068916082382202,
+      "nli_entailment": null,
+      "verdict": "fabricated",
+      "reason": "no match (sim=0.507); source KG confidence was HIGH",
+      "fallback": null
+    },
+    {
+      "response_triple": {
+        "entity1": "Einstein",
+        "relation": "was born in",
+        "entity2": "Berlin",
+        "confidence": "HIGH"
+      },
+      "best_source_triple": {
+        "entity1": "Albert Einstein",
+        "relation": "was born in",
+        "entity2": "Ulm",
+        "confidence": "HIGH"
+      },
+      "similarity": 0.751440703868866,
+      "nli_entailment": 0.01105134841054678,
+      "verdict": "contradicted",
+      "reason": "matched source triple but NLI disagrees (sim=0.751, nli=0.011)",
+      "fallback": null
+    }
+  ],
+  "source_triples": [
+    {
+      "entity1": "Albert Einstein",
+      "relation": "attended",
+      "entity2": "Luitpold Gymnasium",
+      "confidence": "HIGH"
+    },
+    {
+      "entity1": "Albert Einstein",
+      "relation": "was born on",
+      "entity2": "14 March 1879",
+      "confidence": "HIGH"
+    },
+    {
+      "entity1": "Ulm",
+      "relation": "is located in",
+      "entity2": "Germany",
+      "confidence": "HIGH"
+    },
+    {
+      "entity1": "Albert Einstein",
+      "relation": "was born in",
+      "entity2": "Ulm",
+      "confidence": "HIGH"
+    }
+  ],
+  "clusters": {
+    "source_entity_clusters": {
+      "Albert Einstein": [
+        "Albert Einstein"
+      ],
+      "Luitpold Gymnasium": [
+        "Luitpold Gymnasium"
+      ],
+      "Germany": [
+        "Germany"
+      ],
+      "14 March 1879": [
+        "14 March 1879"
+      ],
+      "Ulm": [
+        "Ulm"
+      ]
+    },
+    "source_edge_clusters": {
+      "attended": [
+        "attended"
+      ],
+      "was born in": [
+        "was born in"
+      ],
+      "is located in": [
+        "is located in"
+      ],
+      "was born on": [
+        "was born on"
+      ]
+    },
+    "response_entity_clusters": {
+      "telephone": [
+        "telephone"
+      ],
+      "Berlin": [
+        "Berlin"
+      ],
+      "Einstein": [
+        "Einstein"
+      ]
+    },
+    "response_edge_clusters": {
+      "was born in": [
+        "was born in"
+      ],
+      "invented": [
+        "invented"
+      ]
+    }
+  }
+}
